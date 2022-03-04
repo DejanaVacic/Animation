@@ -1,0 +1,118 @@
+-<!DOCTYPE html>
+<!-- saved from url=(0101)file:///C:/Users/HP/AppData/Local/Temp/Temp1_Animacija_ispravljen%20(1).zip/Animacija_ispravljen.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+   <title>Animacija</title>
+   
+<style> 
+  body{
+    width: 100%;
+  height: 100%;
+  background-color: #050210;
+  }
+
+  #kontejner {
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    margin: 0 auto;
+    left: 38%;
+    top: 29%;
+}
+
+  #MyDiv{
+    position: relative;
+    border-radius: 50%;
+    background-color: #050210;
+    background: repeating-radial-gradient(circle, #fb5dad, #55fb9f, #b97aff);
+    width: 400px;
+    height: 400px;
+    animation: my-animation;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+  }
+
+ #MyDiv::before{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  filter: blur(50px);
+  background: linear-gradient(#fb5dad, #55fb9f, #b97aff);
+  border-radius: 50%;
+}
+
+
+  #My-Div{
+  background: (circle #050210);
+  position: absolute;
+  margin: 0 auto;
+  top: -350px;
+  left: 50px;
+  }
+
+ #My-div{
+  position: relative;
+  border-radius: 50%;
+  background-color: #050210;
+  width: 300px;
+  height: 300px;
+}
+
+#My-div::after{
+  content: '';
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  width: 260px;
+  height: 260px;
+  background-color: #0E0A24;
+  border-radius: 50%; 
+  animation: my-animation2;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+}
+
+/* #MyDiv{
+  radial-gradient(at 0% 50%);
+ transform: scale(0, 1);
+}
+#My-div{
+       radial-gradient(at 0% 50%);
+  transform: scale(0, 1); 
+} */
+   
+ @keyframes my-animation2{
+  0%{
+  transform: scale(0);
+}
+  100%{
+  transform: scale(1);
+}
+}
+ 
+  @keyframes my-animation{
+  0% {
+  transform: rotate(0deg);
+
+}
+100%{
+transform: rotate(360deg);
+}
+
+}
+</style> 
+</head>
+
+<body>
+
+  <div id="kontejner">
+    <div id="MyDiv"> </div>
+    <div id="My-div"> </div>
+  </div>
+
+
+
+</body></html>
